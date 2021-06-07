@@ -1,0 +1,10 @@
+name: FantasyRaces
+version: ${project.version}
+main: me.adelemphii.fantasyraces.FantasyRaces
+api-version: 1.16
+author: Adelemphii
+website: https://www.adelemphii.me
+
+commands:
+  persona:
+    description: Shows the persona stuff
