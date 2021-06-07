@@ -111,7 +111,7 @@ public class DwarfTossEvents implements Listener {
 
         if (event.getCause() == EntityDamageEvent.DamageCause.FALL) {
 
-            if(plugin.getDwarfToss().isEmpty()) { return; }
+            if(!plugin.getDwarfToss().containsKey(player.getUniqueId())) { return; }
 
             if (plugin.getDwarfToss().get(player.getUniqueId())) {
                 event.setCancelled(true);
