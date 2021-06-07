@@ -16,7 +16,6 @@ import org.bukkit.event.player.PlayerInteractAtEntityEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.EquipmentSlot;
 import org.bukkit.util.Vector;
-import org.spigotmc.event.entity.EntityDismountEvent;
 
 import java.util.List;
 
@@ -120,6 +119,7 @@ public class DwarfTossEvents implements Listener {
                 Location landing = player.getLocation();
                 World world = landing.getWorld();
 
+                assert world != null;
                 world.playSound(landing, Sound.BLOCK_ANVIL_LAND, 1f, .5f);
 
                 for (Entity entity : player.getNearbyEntities(5, 5, 5)) {
